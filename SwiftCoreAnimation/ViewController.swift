@@ -17,8 +17,14 @@ class ViewController: UIViewController {
         redBall.backgroundColor = UIColor.redColor()
         redBall.layer.cornerRadius = 50
         self.view.addSubview(redBall)
-     
         
+        UIView.animateWithDuration(5, delay: 0.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            
+            redBall.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(2.0, 2.0), CGAffineTransformMakeTranslation(100, 120))
+            
+            redBall.backgroundColor = UIColor.blueColor()
+            
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
