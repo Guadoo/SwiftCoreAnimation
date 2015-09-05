@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let redBall = UIView(frame: CGRectMake(50, 50, 100, 100))
+        redBall.backgroundColor = UIColor.redColor()
+        redBall.layer.cornerRadius = 50
+        self.view.addSubview(redBall)
+     
+        
     }
 
     override func didReceiveMemoryWarning() {
